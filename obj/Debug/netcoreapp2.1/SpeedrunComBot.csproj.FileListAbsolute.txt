@@ -1,0 +1,5 @@
+C:\Users\jackw\repos\SpeedrunComBot\obj\Debug\netcoreapp2.1\SpeedrunComBot.csproj.AssemblyReference.cache
+C:\Users\jackw\repos\SpeedrunComBot\obj\Debug\netcoreapp2.1\SpeedrunComBot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jackw\repos\SpeedrunComBot\obj\Debug\netcoreapp2.1\SpeedrunComBot.AssemblyInfoInputs.cache
+C:\Users\jackw\repos\SpeedrunComBot\obj\Debug\netcoreapp2.1\SpeedrunComBot.AssemblyInfo.cs
+C:\Users\jackw\repos\SpeedrunComBot\obj\Debug\netcoreapp2.1\SpeedrunComBot.csproj.CoreCompileInputs.cache
