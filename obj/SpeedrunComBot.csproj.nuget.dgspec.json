@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jackw\\repos\\SpeedrunComBot\\SpeedrunComBot.csproj": {}
+    "C:\\Users\\jackw\\repos\\SRCOMDiscordBot\\SpeedrunComBot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jackw\\repos\\SpeedrunComBot\\SpeedrunComBot.csproj": {
+    "C:\\Users\\jackw\\repos\\SRCOMDiscordBot\\SpeedrunComBot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jackw\\repos\\SpeedrunComBot\\SpeedrunComBot.csproj",
+        "projectUniqueName": "C:\\Users\\jackw\\repos\\SRCOMDiscordBot\\SpeedrunComBot.csproj",
         "projectName": "SpeedrunComBot",
-        "projectPath": "C:\\Users\\jackw\\repos\\SpeedrunComBot\\SpeedrunComBot.csproj",
+        "projectPath": "C:\\Users\\jackw\\repos\\SRCOMDiscordBot\\SpeedrunComBot.csproj",
         "packagesPath": "C:\\Users\\jackw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jackw\\repos\\SpeedrunComBot\\obj\\",
+        "outputPath": "C:\\Users\\jackw\\repos\\SRCOMDiscordBot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jackw\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -41,6 +41,10 @@
             "Discord.Net": {
               "target": "Package",
               "version": "[3.10.0, )"
+            },
+            "SpeedrunDotComAPI": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

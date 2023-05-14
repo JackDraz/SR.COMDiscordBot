@@ -1,9 +1,10 @@
 using Discord.WebSocket;
 using Discord.Commands;
+using System.Reflection;
 
 public class CommandHandler
 {
-     private readonly DiscordSocketClient _client;
+    private readonly DiscordSocketClient _client;
     private readonly CommandService _commands;
 
     // Retrieve client and CommandService instance via ctor
@@ -18,16 +19,15 @@ public class CommandHandler
         // Hook the MessageReceived event into our command handler
         _client.MessageReceived += HandleCommandAsync;
 
-        // Here we discover all of the command modules in the entry 
-        // assembly and load them. Starting from Discord.NET 2.0, a
-        // service provider is required to be passed into the
-        // module registration method to inject the 
-        // required dependencies.
+        _commands.AddTypeReader(typeof(bool), new BooleanTypeReader());
+
+        // Here we discover all of the command modules in the entry assembly and load them. Starting from Discord.NET 2.0, a 
+        // service provider is required to be passed into the module registration method to inject the required dependencies.
         //
-        // If you do not use Dependency Injection, pass null.
-        // See Dependency Injection guide for more information.
-        await _commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(), 
-                                        services: null);
+        // If you do not use Dependency Injection, pass null. See Dependency Injection guide for more information.
+        await _commands.AddModulesAsync(assembly: Assembly.GetEntryAssembly(), services: null);
+
+        
     }
 
     private async Task HandleCommandAsync(SocketMessage messageParam)
@@ -40,7 +40,7 @@ public class CommandHandler
         int argPos = 0;
 
         // Determine if the message is a command based on the prefix and make sure no bots trigger commands
-        if (!(message.HasCharPrefix('!', ref argPos) || 
+        if (!(message.HasCharPrefix('/', ref argPos) || 
             message.HasMentionPrefix(_client.CurrentUser, ref argPos)) ||
             message.Author.IsBot)
             return;

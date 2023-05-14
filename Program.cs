@@ -1,5 +1,7 @@
-﻿using Discord;
+﻿using SpeedrunDotComAPI;
+using Discord;
 using Discord.WebSocket;
+using Discord.Commands;
 
 namespace SpeedrunComBot 
 {
@@ -10,13 +12,20 @@ namespace SpeedrunComBot
         
         public async Task MainAsync()
         {
+            SRCApiClient src = new SRCApiClient();
+            
             _connectInst = new DiscordSocketClient();
             _connectInst.Log += Log;
 
             String token = Environment.GetEnvironmentVariable("SrComBotToken");
 
+            //Verify login + install commands from Modules
             await _connectInst.LoginAsync(TokenType.Bot, token);
             await _connectInst.StartAsync();
+            CommandService commandService = new CommandService();
+            var commandHandler = new CommandHandler(_connectInst, commandService);
+
+            await commandHandler.InstallCommandsAsync();
 
             await Task.Delay(-1);
         }

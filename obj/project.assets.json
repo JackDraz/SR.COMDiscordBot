@@ -119,6 +119,35 @@
           }
         }
       },
+      "JetBrains.Annotations/2022.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "related": ".deps.json;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/JetBrains.Annotations.dll": {
+            "related": ".deps.json;.xml"
+          }
+        }
+      },
+      "Macross.Json.Extensions/2.2.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Text.Json": "4.7.2"
+        },
+        "compile": {
+          "lib/netstandard2.1/Macross.Json.Extensions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Macross.Json.Extensions.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
         "type": "package",
         "compile": {
@@ -143,6 +172,19 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "SpeedrunDotComAPI/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "JetBrains.Annotations": "2022.1.0",
+          "Macross.Json.Extensions": "2.2.0"
+        },
+        "compile": {
+          "lib/net6.0/SpeedrunDotComAPI.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/SpeedrunDotComAPI.dll": {}
         }
       },
       "System.Collections.Immutable/5.0.0": {
@@ -201,6 +243,19 @@
         },
         "build": {
           "buildTransitive/net5.0/_._": {}
+        }
+      },
+      "System.Text.Json/4.7.2": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -357,6 +412,43 @@
         "lib/netstandard2.1/Discord.Net.WebSocket.xml"
       ]
     },
+    "JetBrains.Annotations/2022.1.0": {
+      "sha512": "ASfpoFJxiRsC9Xc4TWuPM41Zb/gl64xwfMOhnOZ3RnVWGYIZchjpWQV5zshJgoc/ZxVtgjaF7b577lURj7E6ig==",
+      "type": "package",
+      "path": "jetbrains.annotations/2022.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "jetbrains.annotations.2022.1.0.nupkg.sha512",
+        "jetbrains.annotations.nuspec",
+        "lib/net20/JetBrains.Annotations.dll",
+        "lib/net20/JetBrains.Annotations.xml",
+        "lib/netstandard1.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard1.0/JetBrains.Annotations.dll",
+        "lib/netstandard1.0/JetBrains.Annotations.xml",
+        "lib/netstandard2.0/JetBrains.Annotations.deps.json",
+        "lib/netstandard2.0/JetBrains.Annotations.dll",
+        "lib/netstandard2.0/JetBrains.Annotations.xml",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.dll",
+        "lib/portable40-net40+sl5+win8+wp8+wpa81/JetBrains.Annotations.xml"
+      ]
+    },
+    "Macross.Json.Extensions/2.2.0": {
+      "sha512": "g1rUYJsadmi3ecxP6dVa2o+J4449TZYriBzxk9we2JOPfy9FyhwuRKIiPs8OQtx5dUcDAIpabA3a69jxZf68PQ==",
+      "type": "package",
+      "path": "macross.json.extensions/2.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Macross.Json.Extensions.dll",
+        "lib/netstandard2.0/Macross.Json.Extensions.xml",
+        "lib/netstandard2.1/Macross.Json.Extensions.dll",
+        "lib/netstandard2.1/Macross.Json.Extensions.xml",
+        "macross.json.extensions.2.2.0.nupkg.sha512",
+        "macross.json.extensions.nuspec"
+      ]
+    },
     "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
       "sha512": "ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
       "type": "package",
@@ -405,6 +497,22 @@
         "newtonsoft.json.13.0.2.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "SpeedrunDotComAPI/1.0.0": {
+      "sha512": "jR4vs51ydFORqCPM/ajGMnzgTCNbR4M//RIllLsnOu1bRZb8RUG/OcEYCvOf8XYTyJKoWVsKvxJe3aEN+ZGF5w==",
+      "type": "package",
+      "path": "speedrundotcomapi/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net48/SpeedrunDotComAPI.dll",
+        "lib/net5.0/SpeedrunDotComAPI.dll",
+        "lib/net6.0/SpeedrunDotComAPI.dll",
+        "lib/netcoreapp3.1/SpeedrunDotComAPI.dll",
+        "lib/netstandard2.1/SpeedrunDotComAPI.dll",
+        "speedrundotcomapi.1.0.0.nupkg.sha512",
+        "speedrundotcomapi.nuspec"
       ]
     },
     "System.Collections.Immutable/5.0.0": {
@@ -508,6 +616,28 @@
         "system.reactive.nuspec"
       ]
     },
+    "System.Text.Json/4.7.2": {
+      "sha512": "TcMd95wcrubm9nHvJEQs70rC0H/8omiSGGpU4FQ/ZA1URIqD4pjmFJh2Mfv1yH1eHgJDWTi2hMDXwTET+zOOyg==",
+      "type": "package",
+      "path": "system.text.json/4.7.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.4.7.2.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.ValueTuple/4.5.0": {
       "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
@@ -555,7 +685,8 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
-      "Discord.Net >= 3.10.0"
+      "Discord.Net >= 3.10.0",
+      "SpeedrunDotComAPI >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -564,11 +695,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jackw\\repos\\SpeedrunComBot\\SpeedrunComBot.csproj",
+      "projectUniqueName": "C:\\Users\\jackw\\repos\\SRCOMDiscordBot\\SpeedrunComBot.csproj",
       "projectName": "SpeedrunComBot",
-      "projectPath": "C:\\Users\\jackw\\repos\\SpeedrunComBot\\SpeedrunComBot.csproj",
+      "projectPath": "C:\\Users\\jackw\\repos\\SRCOMDiscordBot\\SpeedrunComBot.csproj",
       "packagesPath": "C:\\Users\\jackw\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jackw\\repos\\SpeedrunComBot\\obj\\",
+      "outputPath": "C:\\Users\\jackw\\repos\\SRCOMDiscordBot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jackw\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -598,6 +729,10 @@
           "Discord.Net": {
             "target": "Package",
             "version": "[3.10.0, )"
+          },
+          "SpeedrunDotComAPI": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
