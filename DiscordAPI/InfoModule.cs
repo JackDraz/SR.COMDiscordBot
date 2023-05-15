@@ -5,7 +5,7 @@ using System.Net.Http;
 
 public class InfoModule : ModuleBase<SocketCommandContext>
 {
-HttpClient client = new HttpClient();
+    HttpClient client = new HttpClient();
 
     //Text that will include full list of commands.
     //TO:DO Create text function to combine all list of commands into a bot print statement
@@ -14,7 +14,6 @@ HttpClient client = new HttpClient();
 
     [Command("ping")]
     [Summary("test function, PingPong")]
-
     public Task PingPongAsync() => ReplyAsync("pong");
 
     [Command("help")]
@@ -26,8 +25,16 @@ HttpClient client = new HttpClient();
     public async Task userByName([Remainder] [Summary("expects username as a string")] string userName) 
     {
         var userAPI = new UserApiClient(client);
-        UserModel user = await userAPI.GetSingleUser(userName);
-        var name = user.Names[0];
-        await ReplyAsync($"User {name} found!");
+        UserModel user = await userAPI.GetSingleUser(userName); 
+        string? name = user.Names[0];
+        if (name != null)
+        {
+            await ReplyAsync($"User {name} found!");
+        }
+        else
+        {
+            await ReplyAsync("User not found!");
+        }
+        
     }
 }
