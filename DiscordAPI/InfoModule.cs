@@ -1,3 +1,5 @@
+
+using Discord;
 using Discord.Commands;
 using SpeedrunDotComAPI.Users;
 using System.Net.Http;
